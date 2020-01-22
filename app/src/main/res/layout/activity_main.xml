@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:screenOrientation="portrait"
+    tools:context=".view.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/beigebackground2"
+        android:scaleType="centerCrop"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/tostudentview_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Students"
+                android:textAlignment="center"
+                />
+            <Button
+                android:id="@+id/toattendancehandler_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tostudentview_button"
+                android:text="Attendance Log"
+                android:textAlignment="center"
+                />
+            <Button
+                android:id="@+id/toaddstudent_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toattendancehandler_button"
+                android:text="Add Student"
+                android:textAlignment="center"
+                />
+
+            <Button
+                android:id="@+id/integrate_report_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toaddstudent_button"
+                android:text="Integrate Report"
+                android:textAlignment="center"
+                />
+
+        <Button
+            android:id="@+id/import_csv_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/integrate_report_button"
+            android:text="Import CSV"
+            android:textAlignment="center"
+            />
+
+        <Button
+            android:id="@+id/export_csv_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/import_csv_button"
+            android:text="Export CSV"
+            android:textAlignment="center"
+            />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

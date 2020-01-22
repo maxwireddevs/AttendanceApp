@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/sethours_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="Set Duration"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/hours_show_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sethours_text"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <SeekBar
+        android:id="@+id/attendanceseekbar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:max="8"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/hours_show_textview"
+        android:progress="4" />
+
+    <TextView
+        android:id="@+id/adjusttime_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adjust Timing"
+        android:textSize="20dp"
+        android:layout_below="@id/attendanceseekbar"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/adjusttime_centerdivide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:textSize="35dp"
+        android:layout_marginTop="77dp"
+        android:layout_below="@id/adjusttime_text"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <com.yanzhenjie.wheel.WheelView
+        android:id="@+id/hours_wheelview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/adjusttime_text"
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@id/adjusttime_centerdivide"
+        android:layout_marginRight="20dp"
+        />
+    <com.yanzhenjie.wheel.WheelView
+        android:id="@+id/minutes_wheelview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/adjusttime_text"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@id/adjusttime_centerdivide"
+        android:layout_marginLeft="20dp"
+        />
+
+
+
+
+</RelativeLayout>
+</ScrollView>

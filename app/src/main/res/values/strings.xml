@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">StudentListApp</string>
+    <string name="prompt">Search for keyword in:</string>
+    <string name="attendancebuilder_title">Add attendance</string>
+    <string name="tab_text_1">Add Student</string>
+    <string name="tab_text_2">View Student</string>
+    <string name="tab_text_3">Utilities</string>
+    <string name="tab_text_4">Attendance</string>
+    <string name="tab_text_5">Attendance Graph</string>
+
+</resources>

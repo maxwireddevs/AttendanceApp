@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CalendarHistory"
+    android:screenOrientation="portrait">
+
+    <sun.bob.mcalendarview.MCalendarView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        tools:context=".MainActivity"
+        android:id="@+id/calendar"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/attendance_counter_alltime"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendar"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/attendance_counter_thismonth"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/attendance_counter_alltime"
+        android:layout_marginTop="10dp"
+        />
+
+</RelativeLayout>

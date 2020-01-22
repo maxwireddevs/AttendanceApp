@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/editstudent_name"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        />
+
+    <EditText
+        android:id="@+id/editstudent_nickname"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        />
+
+    <EditText
+        android:id="@+id/editstudent_grade"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        />
+
+    <Spinner
+        android:id="@+id/editstudent_language"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:entries="@array/languagesubject"
+        android:prompt="@string/prompt"
+        />
+
+    <EditText
+        android:id="@+id/editstudent_phone"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        />
+
+</LinearLayout>

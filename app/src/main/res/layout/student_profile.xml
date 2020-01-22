@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:screenOrientation="portrait">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait">
+
+    <TextView
+        android:id="@+id/profile_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Profile"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/profilename_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_title"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/profilenickname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilename_text"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/profilegrade_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilenickname_text"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/profilelanguage_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilegrade_text"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/profilephone_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilelanguage_text"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/addattendance_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profilephone_text"
+        android:text="add attendance"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/editstudent_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addattendance_button"
+        android:text="edit student"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <Button
+        android:id="@+id/deletestudent_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editstudent_button"
+        android:text="delete student"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/attendancehistorystudent_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deletestudent_button"
+        android:text="attendance history"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
+
+</RelativeLayout>
