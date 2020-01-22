@@ -7,7 +7,7 @@ Simple attendance taking app for tuition centres.
 - Each attendance consists of id, timestamp, name and duration
 - Attendance is linked to the student by the name
 - Editing the student's name will also update all of attendance with the said name, but it does not work the other way round
-- student language options are indonesian and english
-- edit attendance timestamp for calendarview is not fully done yet, currently a slight typo will cause the whole application to become unusable
-- might add a refresh button for the attendance and student list in the near future
-- default activity is MainActivity, login screen template is included though (just change the manifest)
+- Student language options are indonesian and english
+- Edit attendance timestamp for calendarview is not fully done yet, currently a slight typo will cause the whole application to become unusable
+- Might add a refresh button for the attendance and student list in the near future
+- Default activity is MainActivity, login screen template is included though (just change the manifest)
