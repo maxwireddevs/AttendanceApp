@@ -6,17 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".view.ViewStudents">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:src="@drawable/beigebackground"
-        android:scaleType="centerCrop"
-        />
 
     <ImageView
         android:id="@+id/bannerforviewstudents"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="100dp"
         android:src="@drawable/bannerforstudentsview"
         />
 
@@ -28,21 +22,13 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context=".activities.BakeryListingsActivity">
 
-        <Spinner
-            android:id="@+id/searchspinner"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
-            android:layout_alignParentTop="true"
-            android:entries="@array/searchsubject"
-            />
+
 
         <EditText
             android:id="@+id/searchkeyword"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_below="@id/searchspinner"
+            android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:hint="Type keyword here"
             />

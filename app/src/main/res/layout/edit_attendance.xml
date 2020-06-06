@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <TextView
+        android:id="@+id/editnametext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Edit Name"
+        android:layout_centerHorizontal="true"
         android:textSize="20dp"
         />
 
@@ -16,51 +18,55 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:hint="Enter name here"
+        android:layout_below="@id/editnametext"
         android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
         />
 
     <TextView
+        android:id="@+id/settimetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Set Timestamp"
-        android:textSize="20dp"
-        />
-
-    <EditText
-        android:id="@+id/editattendance_timestamp"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:hint="Format: YYYY-MM-DD HH:MM"
-        android:layout_gravity="center"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Set Duration"
+        android:layout_below="@id/editattendance_name"
+        android:text="Set Time"
+        android:layout_centerHorizontal="true"
         android:textSize="20dp"
         />
 
     <TextView
-        android:id="@+id/edithours_textview"
+        android:id="@+id/adjusttime_centerdivide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
+        android:text=":"
+        android:textSize="35dp"
+        android:layout_marginTop="77dp"
+        android:layout_below="@id/settimetext"
+        android:layout_centerHorizontal="true"
+
         />
 
-    <SeekBar
-        android:id="@+id/editattendance_duration"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
-        android:max="8"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/hours_show_textview"
-        android:progress="4" />
 
-</LinearLayout>
+    <com.yanzhenjie.wheel.WheelView
+        android:id="@+id/hours_wheelview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/settimetext"
+        android:layout_marginTop="20dp"
+        android:layout_alignRight="@id/adjusttime_centerdivide"
+        android:layout_marginRight="20dp"
+        />
+    <com.yanzhenjie.wheel.WheelView
+        android:id="@+id/minutes_wheelview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/settimetext"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@id/adjusttime_centerdivide"
+        android:layout_marginLeft="20dp"
+        />
+
+
+
+
+</RelativeLayout>

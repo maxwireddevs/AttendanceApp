@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Past week"
         android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
         />
 
     <Button
@@ -19,6 +20,7 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="Next week"
+        android:layout_marginRight="20dp"
         android:layout_alignParentRight="true"
         />
 

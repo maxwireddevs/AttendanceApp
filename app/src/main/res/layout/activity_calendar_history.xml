@@ -7,28 +7,25 @@
     tools:context=".view.CalendarHistory"
     android:screenOrientation="portrait">
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calendar View"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        />
+
     <sun.bob.mcalendarview.MCalendarView
-        android:layout_width="400dp"
-        android:layout_height="400dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".MainActivity"
         android:id="@+id/calendar"
+        android:layout_below="@id/title"
         android:layout_centerHorizontal="true"
-        />
-
-    <TextView
-        android:id="@+id/attendance_counter_alltime"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/calendar"
-        android:layout_marginTop="10dp"
-        />
-
-    <TextView
-        android:id="@+id/attendance_counter_thismonth"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/attendance_counter_alltime"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         />
 
 </RelativeLayout>

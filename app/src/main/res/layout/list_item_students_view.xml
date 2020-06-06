@@ -19,22 +19,6 @@
             android:textSize="20dp"
             />
 
-        <TextView
-            android:id="@+id/student_nickname_recyclerview_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:layout_below="@id/student_name_recyclerview_item"
-            />
-
-        <TextView
-            android:id="@+id/student_grade_recyclerview_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:layout_below="@id/student_nickname_recyclerview_item"
-            />
-
 
     </RelativeLayout>
 

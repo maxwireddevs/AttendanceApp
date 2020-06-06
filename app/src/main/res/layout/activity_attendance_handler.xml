@@ -10,7 +10,6 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:src="@drawable/beigebackground"
         android:scaleType="centerCrop"
         />
 
@@ -20,9 +19,6 @@
         android:layout_height="70dp"
         android:src="@drawable/bannerforstudentsview"
         />
-
-
-
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -67,7 +63,7 @@
             android:id="@+id/fab_send_report"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:src="@drawable/ic_add_black_24dp"
+            android:src="@drawable/ic_file_upload_black_24dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="30dp"
             />

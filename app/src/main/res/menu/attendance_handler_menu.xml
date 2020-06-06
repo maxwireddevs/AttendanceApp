@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/attendancehandler_sendreport"
-        android:icon="@drawable/ic_local_library_black_24dp"
-        android:title="Send report" />
-    <item android:id="@+id/attendancehandler_integratereport"
-        android:icon="@drawable/ic_local_library_black_24dp"
-        android:title="Integrate report" />
-</menu>

@@ -1,16 +1,13 @@
-package com.example.studentlistapp.database;
+package com.wireddevs.attendanceapp.database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.example.studentlistapp.database.model.AttendanceStorage;
-import com.example.studentlistapp.view.AttendanceHandler;
-
-import static com.example.studentlistapp.database.model.AttendanceStorage.COLUMN_TIMESTAMP;
-import static com.example.studentlistapp.database.model.AttendanceStorage.TABLE_NAME;
+import com.wireddevs.attendanceapp.database.model.AttendanceStorage;
+import static com.wireddevs.attendanceapp.database.model.AttendanceStorage.COLUMN_TIMESTAMP;
+import static com.wireddevs.attendanceapp.database.model.AttendanceStorage.TABLE_NAME;
 
 public class AttendanceHelper extends SQLiteOpenHelper{
 
@@ -42,7 +39,7 @@ public class AttendanceHelper extends SQLiteOpenHelper{
         onCreate(db);
     }
 
-    public long insertStudent(String name, float attendance) {
+    public long insertStudent(String name) {
         // get writable database as we want to write data
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -50,7 +47,6 @@ public class AttendanceHelper extends SQLiteOpenHelper{
         // `id` and `timestamp` will be inserted automatically.
         // no need to add them
         values.put(AttendanceStorage.COLUMN_STUDENT_NAME, name);
-        values.put(AttendanceStorage.COLUMN_STUDENT_SESSION_DURATION, attendance);
 
         // insert row
         long id = db.insert(TABLE_NAME, null, values);
@@ -62,23 +58,21 @@ public class AttendanceHelper extends SQLiteOpenHelper{
         return id;
     }
 
-    public void overwriteAttendance(long id, String timestamp, String name, float duration){
+    public void overwriteAttendance(long id, String timestamp, String name){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(AttendanceStorage.COLUMN_ID, id);
         values.put(AttendanceStorage.COLUMN_TIMESTAMP, timestamp);
         values.put(AttendanceStorage.COLUMN_STUDENT_NAME, name);
-        values.put(AttendanceStorage.COLUMN_STUDENT_SESSION_DURATION, duration);
         db.insert(TABLE_NAME, null, values);
         db.close();
     }
 
-    public long forceAttendance(String timestamp, String name, float duration){
+    public long forceAttendance(String timestamp, String name){
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues values=new ContentValues();
         values.put(AttendanceStorage.COLUMN_TIMESTAMP, timestamp);
         values.put(AttendanceStorage.COLUMN_STUDENT_NAME, name);
-        values.put(AttendanceStorage.COLUMN_STUDENT_SESSION_DURATION, duration);
         long id=db.insert(TABLE_NAME,null,values);
         db.close();
         return id;
@@ -131,7 +125,7 @@ public class AttendanceHelper extends SQLiteOpenHelper{
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(AttendanceStorage.TABLE_NAME,
-                new String[]{AttendanceStorage.COLUMN_ID, AttendanceStorage.COLUMN_TIMESTAMP, AttendanceStorage.COLUMN_STUDENT_NAME, AttendanceStorage.COLUMN_STUDENT_SESSION_DURATION},
+                new String[]{AttendanceStorage.COLUMN_ID, AttendanceStorage.COLUMN_TIMESTAMP, AttendanceStorage.COLUMN_STUDENT_NAME},
                 AttendanceStorage.COLUMN_ID + "=?",
                 new String[]{String.valueOf(id)}, null, null, null, null);
 
@@ -142,8 +136,7 @@ public class AttendanceHelper extends SQLiteOpenHelper{
             AttendanceStorage attendance = new AttendanceStorage(
                     cursor.getInt(cursor.getColumnIndex(AttendanceStorage.COLUMN_ID)),
                     cursor.getString(cursor.getColumnIndex(AttendanceStorage.COLUMN_TIMESTAMP)),
-                    cursor.getString(cursor.getColumnIndex(AttendanceStorage.COLUMN_STUDENT_NAME)),
-                    cursor.getFloat(cursor.getColumnIndex(AttendanceStorage.COLUMN_STUDENT_SESSION_DURATION)));
+                    cursor.getString(cursor.getColumnIndex(AttendanceStorage.COLUMN_STUDENT_NAME)));
             // close the db connection
             cursor.close();
             db.close();
@@ -154,14 +147,13 @@ public class AttendanceHelper extends SQLiteOpenHelper{
         }
     }
 
-    public void editAttendance(long ID, String timestamp, String name, float duration){
+    public void editAttendance(long ID, String timestamp, String name){
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
 
         values.put(AttendanceStorage.COLUMN_TIMESTAMP,timestamp);
         values.put(AttendanceStorage.COLUMN_STUDENT_NAME,name);
-        values.put(AttendanceStorage.COLUMN_STUDENT_SESSION_DURATION,duration);
 
         db.update(AttendanceStorage.TABLE_NAME,values,AttendanceStorage.COLUMN_ID + " = ? ", new String[]{String.valueOf(ID)});
         db.close();

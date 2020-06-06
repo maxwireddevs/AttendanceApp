@@ -8,30 +8,4 @@
         android:layout_height="50dp"
         />
 
-    <EditText
-        android:id="@+id/editstudent_nickname"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        />
-
-    <EditText
-        android:id="@+id/editstudent_grade"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        />
-
-    <Spinner
-        android:id="@+id/editstudent_language"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:entries="@array/languagesubject"
-        android:prompt="@string/prompt"
-        />
-
-    <EditText
-        android:id="@+id/editstudent_phone"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        />
-
 </LinearLayout>
